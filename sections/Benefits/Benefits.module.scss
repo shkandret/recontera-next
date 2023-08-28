@@ -1,0 +1,52 @@
+.benefits {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  &__title {
+    font-size: 80px;
+    font-weight: 200;
+    line-height: 88px;
+  }
+
+  &__title-active {
+    animation: up-animation 0.8s ease-in-out 0.5s backwards;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 32px;
+    opacity: 0.64;
+    margin-top: 112px;
+    width: 960px;
+  }
+
+  &__text-active {
+    animation: up-animation 0.8s ease-in-out 0.65s backwards;
+  }
+
+  &__cards {
+    display: flex;
+    margin-top: 128px;
+    gap: 50px;
+  }
+
+  &__cards-active {
+    animation: up-animation 0.8s ease-in-out 0.8s backwards;
+  }
+}
+
+@keyframes up-animation {
+  from {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

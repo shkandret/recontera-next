@@ -1,0 +1,77 @@
+.implementation {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  &-active {
+    animation: up-animation 0.8s ease-in-out 0.5s backwards;
+  }
+
+  &__title {
+    font-size: 80px;
+    font-weight: 200;
+    line-height: 88px;
+  }
+
+  &__text {
+    text-align: center;
+    margin-top: 82px;
+    color: rgba(255, 255, 255, 0.64);
+  }
+
+  &__text-first {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  &__text-second {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  &__company {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    margin-top: 114px;
+  }
+
+  &__company-info {
+    display: flex;
+    gap: 80px;
+  }
+
+  &__company-info-num {
+    font-size: 48px;
+    font-weight: 200;
+  }
+
+  &__company-info-text {
+    font-size: 18px;
+  }
+
+  &__company-about-text {
+    font-size: 18px;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 0.64);
+    width: 552px;
+    height: 123px;
+    margin-top: 36px;
+    margin-bottom: 73px;
+  }
+}
+
+@keyframes up-animation {
+  from {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

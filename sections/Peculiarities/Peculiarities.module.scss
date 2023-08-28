@@ -1,0 +1,104 @@
+.peculiarities {
+  display: flex;
+  flex-direction: column;
+  min-height: 150vh;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+
+  &__first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__first-title {
+    font-size: 80px;
+    font-weight: 200;
+    line-height: 88px;
+  }
+
+  &__first-title-active {
+    animation: up-animation 0.8s ease-in-out 0.6s backwards;
+  }
+
+  &__first-text {
+    font-size: 18px;
+    line-height: 32px;
+    width: 960px;
+    opacity: 0.64;
+    margin-top: 114px;
+  }
+
+  &__first-text-active {
+    animation: up-animation 0.8s ease-in-out 0.6s backwards;
+  }
+
+  &__background {
+    position: absolute;
+    top: 15%;
+  }
+
+  &__second {
+    display: flex;
+    gap: 178px;
+  }
+
+  &__image {
+    margin-top: 330px;
+  }
+
+  &__image-active {
+    animation: up-animation 0.8s ease-in-out 0.6s backwards;
+  }
+
+  &__image-animation {
+    animation: rotate360-animation 1s cubic-bezier(0.4, 0, 0.4, 1) 1.7s
+      backwards;
+    transform-origin: 50% 50%;
+    clip-path: none;
+  }
+
+  &__second-text {
+    font-size: 32px;
+    line-height: 40px;
+    width: 511px;
+    font-weight: 200;
+    margin-top: 239px;
+  }
+
+  &__second-text-active {
+    animation: up-animation 0.8s ease-in-out 0.6s backwards;
+  }
+}
+
+@keyframes rotate360-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes up-animation {
+  from {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

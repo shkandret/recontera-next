@@ -1,0 +1,67 @@
+.symbiosisTech {
+  min-height: 100vh;
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__wrapper {
+    width: 1198px;
+    display: flex;
+    column-gap: 48px;
+    margin-left: 264px;
+  }
+
+  &__image {
+    position: absolute;
+    left: 104px;
+  }
+
+  &__image-active {
+    animation: up-animation 0.5s ease-in-out 0.4s backwards;
+  }
+
+  &__title {
+    font-size: 80px;
+    font-weight: 200;
+    line-height: 88px;
+  }
+
+  &__title-active {
+    animation: up-animation 0.8s ease-in-out 0.5s backwards;
+  }
+}
+
+.swiper {
+  &__wrapper {
+    display: flex;
+    padding-left: 264px;
+    overflow-x: auto;
+    // width: 100%;
+  }
+
+  &__container {
+    display: inline-flex;
+    column-gap: 62px;
+  }
+}
+
+@keyframes up-animation {
+  from {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

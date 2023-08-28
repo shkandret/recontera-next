@@ -1,0 +1,158 @@
+.relevantToCompany {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 80px;
+    font-weight: 200;
+    line-height: 88px;
+  }
+
+  &__title-active {
+    animation: up-animation 0.8s ease-in-out 0.4s backwards;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 32px;
+    width: 664px;
+    margin-top: 217px;
+    z-index: 2;
+  }
+
+  &__text-active {
+    animation: up-animation 0.8s ease-in-out 0.4s backwards;
+  }
+
+  &__sector-b2c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 179px;
+    width: 101px;
+    margin-top: 221px;
+  }
+
+  &__sector-b2c-active {
+    animation: left-to-right-animation 0.8s ease-in-out 0.9s backwards;
+  }
+
+  &__sector-b2b {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 119px;
+    width: 101px;
+    margin-top: 92px;
+  }
+
+  &__sector-b2b-active {
+    animation: right-to-left-animation 0.8s ease-in-out 0.9s backwards;
+  }
+
+  &__sector-title {
+    font-size: 48px;
+    font-weight: 300;
+    color: #fff;
+  }
+
+  &__sector-subtitle {
+    font-size: 17px;
+    opacity: 0.5;
+    margin-top: 16px;
+  }
+
+  &__background {
+    position: absolute;
+    margin-top: 13px;
+  }
+
+  &__background-active {
+    animation: up-animation 0.8s ease-in-out 0.4s backwards;
+  }
+
+  &__b2c-line {
+    position: relative;
+    left: 150px;
+    bottom: 220px;
+    opacity: 1;
+  }
+
+  &__b2c-line-active {
+    animation: down-animation 0.8s ease-in-out 1.5s backwards;
+  }
+
+  &__b2b-line {
+    position: relative;
+    right: 135px;
+    bottom: -10px;
+    opacity: 1;
+  }
+
+  &__b2b-line-active {
+    animation: up-animation 0.8s ease-in-out 1.5s backwards;
+  }
+}
+
+@keyframes up-animation {
+  from {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes down-animation {
+  from {
+    opacity: 0;
+    transform: translateY(-15%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes right-to-left-animation {
+  from {
+    opacity: 0;
+    transform: translateX(500%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes left-to-right-animation {
+  from {
+    opacity: 0;
+    transform: translateX(-500%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

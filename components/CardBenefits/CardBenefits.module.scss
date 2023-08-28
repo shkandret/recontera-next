@@ -1,0 +1,18 @@
+.benefits__card {
+  display: flex;
+  border-radius: 16px;
+  background-color: #120421;
+  width: 412px;
+  height: 96px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  gap: 32px;
+  align-items: center;
+
+  &-text {
+    font-size: 32px;
+    font-weight: 200;
+  }
+}

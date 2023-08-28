@@ -1,0 +1,46 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  padding: 32px 50px;
+  background-color: rgba(5, 0, 16, 0.8);
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
+    font-size: 18px;
+    line-height: 28px;
+    list-style: none;
+  }
+
+  &__menu-semibold {
+    font-weight: 600;
+  }
+
+  &__menu-medium {
+    font-weight: 500;
+  }
+
+  &Down {
+    animation: header-down 0.5s ease-in-out backwards;
+  }
+}
+
+@keyframes header-down {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
